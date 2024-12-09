@@ -38,9 +38,9 @@ public class User {
     String phoneNumber;
 
     @Column(nullable = false)
-    String adress;
+    String address;
 
-    @Column(columnDefinition = "user")
+    @Column()
     String role;
 
 }

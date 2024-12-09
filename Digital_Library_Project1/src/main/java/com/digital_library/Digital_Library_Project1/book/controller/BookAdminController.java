@@ -15,7 +15,7 @@ public class BookAdminController {
 
     private final BookServiceForAdmin service;
 
-    @GetMapping("/All")
+    @GetMapping("/all")
     public List<Book> getAll() {
         return service.getAll();
     }

@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-12-01T23:28:58+0400",
+    date = "2024-12-09T01:33:02+0400",
     comments = "version: 1.6.3, compiler: javac, environment: Java 23.0.1 (Oracle Corporation)"
 )
 @Component
@@ -30,7 +30,6 @@ public class UserMapperImpl implements UserMapper {
         user.setGmail( dto.getGmail() );
         user.setPassword( dto.getPassword() );
         user.setPhoneNumber( dto.getPhoneNumber() );
-        user.setAdress( dto.getAdress() );
 
         return user;
     }
@@ -49,7 +48,6 @@ public class UserMapperImpl implements UserMapper {
         user.setGmail( dto.getGmail() );
         user.setPassword( dto.getPassword() );
         user.setPhoneNumber( dto.getPhoneNumber() );
-        user.setAdress( dto.getAdress() );
         user.setRole( dto.getRole() );
 
         return user;
@@ -69,7 +67,6 @@ public class UserMapperImpl implements UserMapper {
         userResponseForAdmin.age( user.getAge() );
         userResponseForAdmin.gmail( user.getGmail() );
         userResponseForAdmin.phoneNumber( user.getPhoneNumber() );
-        userResponseForAdmin.adress( user.getAdress() );
         userResponseForAdmin.role( user.getRole() );
 
         return userResponseForAdmin.build();
@@ -87,7 +84,6 @@ public class UserMapperImpl implements UserMapper {
         user.setGmail( dto.getGmail() );
         user.setPassword( dto.getPassword() );
         user.setPhoneNumber( dto.getPhoneNumber() );
-        user.setAdress( dto.getAdress() );
         user.setRole( dto.getRole() );
 
         return user;
@@ -105,7 +101,6 @@ public class UserMapperImpl implements UserMapper {
         user.setGmail( dto.getGmail() );
         user.setPassword( dto.getPassword() );
         user.setPhoneNumber( dto.getPhoneNumber() );
-        user.setAdress( dto.getAdress() );
 
         return user;
     }
@@ -124,7 +119,6 @@ public class UserMapperImpl implements UserMapper {
         userResponseForUser.gmail( user.getGmail() );
         userResponseForUser.password( user.getPassword() );
         userResponseForUser.phoneNumber( user.getPhoneNumber() );
-        userResponseForUser.adress( user.getAdress() );
 
         return userResponseForUser.build();
     }

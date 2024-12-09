@@ -43,7 +43,7 @@ public class Sale {
     @Column(name = "discount", nullable = false)
     Double discount;
 
-    @Column(name = "tottal_price", nullable = false)
+    @Column(name = "total_price", nullable = false)
     Double totalPrice;
 
 }

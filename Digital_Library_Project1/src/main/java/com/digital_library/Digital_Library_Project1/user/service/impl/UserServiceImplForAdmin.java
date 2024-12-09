@@ -63,7 +63,7 @@ public class UserServiceImplForAdmin implements UserServiceForAdmin {
     @Override
     public List<UserResponseForAdmin> getByAdress(String adress) {
         return repository.findAll().stream()
-                .filter(user -> user.getAdress().contains(adress))
+                .filter(user -> user.getAddress().contains(adress))
                 .map(mapper::toDto).toList();
     }
 
