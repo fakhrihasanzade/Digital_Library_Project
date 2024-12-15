@@ -3,6 +3,8 @@ package com.digital_library.Digital_Library_Project1.sale.dto;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
@@ -20,7 +22,7 @@ public class SaleRequest {
 
     String fkPaymentId;
 
-    LocalDateTime saleDate;
+    LocalDate saleDate;
 
     Long count;
 

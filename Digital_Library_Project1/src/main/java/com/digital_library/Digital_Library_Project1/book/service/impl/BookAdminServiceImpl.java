@@ -11,11 +11,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class BookServiceImplForAdmin implements BookServiceForAdmin {
+public class BookAdminServiceImpl implements BookServiceForAdmin {
 
     private final BookRepository repository;
 
@@ -24,7 +23,11 @@ public class BookServiceImplForAdmin implements BookServiceForAdmin {
 
     @Override
     public List<Book> getAll() {
-        return repository.findAll();
+        try {
+            return repository.findAll();
+        }catch (Exception ex){
+            throw new BookNotFoundException("Book is not found");
+        }
     }
 
     @Override

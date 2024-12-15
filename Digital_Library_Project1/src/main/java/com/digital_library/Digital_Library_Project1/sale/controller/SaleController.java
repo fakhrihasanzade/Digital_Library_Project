@@ -6,6 +6,7 @@ import com.digital_library.Digital_Library_Project1.sale.service.SaleService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -23,7 +24,7 @@ public class SaleController {
 
     @GetMapping("/time-interval/{t1}/{t2}")
     public List<Sale> getBySaleDateInterval(
-            @PathVariable LocalDateTime t1,@PathVariable LocalDateTime t2){
+            @PathVariable LocalDate t1,@PathVariable LocalDate t2){
         return service.getBySaleDateInterval(t1,t2);
     }
 

@@ -1,7 +1,6 @@
 package com.digital_library.Digital_Library_Project1.book.service.impl;
 
 import com.digital_library.Digital_Library_Project1.book.dto.response.BookResponse;
-import com.digital_library.Digital_Library_Project1.book.entity.Book;
 import com.digital_library.Digital_Library_Project1.book.mapper.BookMapper;
 import com.digital_library.Digital_Library_Project1.book.repository.BookRepository;
 import com.digital_library.Digital_Library_Project1.book.service.BookServiceForUser;
@@ -12,7 +11,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class BookServiceImpForUser implements BookServiceForUser {
+public class BookUserServiceImp implements BookServiceForUser {
 
     private final BookRepository repository;
 

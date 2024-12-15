@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.time.Duration;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -26,7 +27,7 @@ public class SaleServiceImpl implements SaleService {
     }
 
     @Override
-    public List<Sale> getBySaleDateInterval(LocalDateTime t1, LocalDateTime t2) {
+    public List<Sale> getBySaleDateInterval(LocalDate t1, LocalDate t2) {
         List<Sale> list = repository.findAll().stream()
                 .filter(s -> s.getSaleDate().isAfter(t1)
                         && (s.getSaleDate().isBefore(t2))).toList();

@@ -6,12 +6,15 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
+
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name = "sales")
+@Entity
+@Table(name = "sales")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Sale {
 
@@ -32,7 +35,7 @@ public class Sale {
     String fkPaymentId;
 
     @Column(name = "sale_date", nullable = false)
-    LocalDateTime saleDate;
+    LocalDate saleDate;
 
     @Column(name = "count", nullable = false)
     Long count;
